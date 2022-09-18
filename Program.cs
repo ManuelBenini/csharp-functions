@@ -48,7 +48,16 @@ int sommaElementiArray(int[] array)
 
 #endregion
 
-int[] numbers = {2, 6, 7, 5, 3, 9};
+Console.WriteLine("Scegliere quanti numeri inserire:");
+int howManyNumbers = Convert.ToInt32(Console.ReadLine());
+
+int[] numbers = new int[howManyNumbers];
+
+for (int i = 0; i < numbers.Length; i++)
+{
+    Console.WriteLine($"Inserire un numero. Numeri rimanenti da inserire: {numbers.Length - i}");
+    numbers[i] = Convert.ToInt32(Console.ReadLine());
+}
 
 Console.Write("L'array fornito è: ");
 StampaArray(numbers);
