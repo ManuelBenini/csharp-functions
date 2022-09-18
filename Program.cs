@@ -35,7 +35,15 @@ int[] ElevaArrayAlQuadrato(int[] array)
 
 int sommaElementiArray(int[] array)
 {
-    return 0;
+
+    int sum = 0;
+
+    for (int i = 0; i < array.Length; i++)
+    {
+        sum = sum + array[i];
+    }
+
+    return sum;
 }
 
 #endregion
@@ -48,6 +56,10 @@ int[] numbers = {2, 6, 7, 5, 3, 9};
 
 // Console.WriteLine(square);
 
-int[] squaredNumbers = ElevaArrayAlQuadrato(numbers);
+// int[] squaredNumbers = ElevaArrayAlQuadrato(numbers);
 
-StampaArray(squaredNumbers);
+// StampaArray(squaredNumbers);
+
+int sum = sommaElementiArray(numbers);
+
+Console.WriteLine(sum);
