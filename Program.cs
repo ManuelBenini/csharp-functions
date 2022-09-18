@@ -24,7 +24,13 @@ int Quadrato(int numero)
 
 int[] ElevaArrayAlQuadrato(int[] array)
 {
-    return new int[0];
+    int[] arrayCopy = (int[])array.Clone();
+
+    for (int i = 0; i < arrayCopy.Length; i++)
+    {
+        arrayCopy[i] = Quadrato(arrayCopy[i]);
+    }
+    return arrayCopy;
 }
 
 int sommaElementiArray(int[] array)
@@ -38,6 +44,10 @@ int[] numbers = {2, 6, 7, 5, 3, 9};
 
 // StampaArray(numbers);
 
-int square = Quadrato(numbers[4]);
+// int square = Quadrato(numbers[4]);
 
-Console.WriteLine(square);
+// Console.WriteLine(square);
+
+int[] squaredNumbers = ElevaArrayAlQuadrato(numbers);
+
+StampaArray(squaredNumbers);
