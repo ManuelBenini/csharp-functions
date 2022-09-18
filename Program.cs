@@ -1,8 +1,5 @@
 ﻿#region Functions
 
-
-// using System;
-
 void StampaArray(int[] array)
 {
     Console.Write("[");
@@ -21,7 +18,8 @@ void StampaArray(int[] array)
 
 int Quadrato(int numero)
 {
-    return 0;
+    int square = numero * numero;
+    return square;
 }
 
 int[] ElevaArrayAlQuadrato(int[] array)
@@ -38,4 +36,8 @@ int sommaElementiArray(int[] array)
 
 int[] numbers = {2, 6, 7, 5, 3, 9};
 
-StampaArray(numbers);
+// StampaArray(numbers);
+
+int square = Quadrato(numbers[4]);
+
+Console.WriteLine(square);
