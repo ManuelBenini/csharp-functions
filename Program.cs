@@ -50,16 +50,24 @@ int sommaElementiArray(int[] array)
 
 int[] numbers = {2, 6, 7, 5, 3, 9};
 
-// StampaArray(numbers);
+Console.Write("L'array fornito è: ");
+StampaArray(numbers);
+Console.WriteLine("");
 
-// int square = Quadrato(numbers[4]);
+int[] squaredNumbers = ElevaArrayAlQuadrato(numbers);
 
-// Console.WriteLine(square);
+Console.Write("L'array elevato al quadrato è: ");
+StampaArray(squaredNumbers);
+Console.WriteLine("");
 
-// int[] squaredNumbers = ElevaArrayAlQuadrato(numbers);
-
-// StampaArray(squaredNumbers);
+Console.Write("L'array originale che non è stato modificato è: ");
+StampaArray(numbers);
+Console.WriteLine("");
 
 int sum = sommaElementiArray(numbers);
 
-Console.WriteLine(sum);
+Console.WriteLine($"La somma dei numeri dell'array originale è: {sum}");
+
+int squaredSum = sommaElementiArray(squaredNumbers);
+
+Console.WriteLine($"La somma dei numeri dell'array elevato al quadrato è: {squaredSum}");
